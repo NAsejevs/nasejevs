@@ -1,6 +1,6 @@
 @font-face {
-    font-family: BebasNeue;
-    src: url(../fonts/BebasNeue-Regular.woff);
+    font-family: Bebas;
+    src: url(../fonts/Bebas-Regular.ttf);
 }
 
 html {
@@ -9,7 +9,14 @@ html {
     animation: gradient 15s ease infinite;
     color: white;
     overflow: hidden;
+    font-size: 1vw;
 }
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 0.5vw;
+    }
+  }
 
 @keyframes gradient {
     0% {
@@ -29,16 +36,61 @@ html {
 }
 
 #center {
+    text-align: center;
+    width: 100%;
     position: absolute;
-    top: 50%;
+    top: 45%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#name {
+    font-family: Bebas;
+    font-size: 20em;
+}
+
+#bottom {
+    font-family: Bebas;
+    position: absolute;
+    bottom: 10%;
     left: 50%;
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
 
-#name {
-    font-family: BebasNeue;
-    font-weight: bold;
-    font-size: 10vw;
-    text-transform: uppercase;
+#icons div {
+    display: inline-block;
+}
+
+#icons div:last-child {
+    margin-left: 10em;
+}
+
+#icons img {
+    width: 10em;
+    height: 10em;
+}
+
+#app-store {
+    opacity: 0.2;
+}
+
+#privacy-policy {
+    font-family: Bebas;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    text-align: center;
+    font-size: 4em;
+}
+
+#privacy-policy a {
+    color: #808080;
+}
+
+#privacy-policy a:hover {
+    color: #bdbdbd;
 }
